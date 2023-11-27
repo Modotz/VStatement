@@ -1,0 +1,133 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Dosis:500);
+
+body {
+    background: #F1F1F1;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.timeline {
+    counter-reset: year 0;
+    position: relative;
+}
+
+    .timeline li {
+        list-style: none;
+        float: left;
+        width: 33.3333%;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Dosis', sans-serif;
+    }
+
+ul:nth-child(1) {
+    color: #ff6a00;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+
+.timeline li:before {
+    counter-increment: year;
+    content: counter(year);
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ff6a00;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 auto 10px auto;
+    background: #F1F1F1;
+    color: #000;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+
+.timeline li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+    top: 17px;
+    left: -50%;
+    z-index: -999;
+    transition: all ease-in-out .3s;
+}
+
+.timeline li:first-child:after {
+    content: none;
+}
+
+.timeline li.active {
+    color: #555555;
+}
+
+.timeline li.active:before {
+    background: #ff6a00;
+    color: #F1F1F1;
+}
+
+.timeline li.active + li:after {
+    background: #ff6a00;
+}
+
+
+#progresh {
+    position: fixed;
+    margin-top: 50px;
+    width: 480px;
+    height: 100px;
+    left: calc(50% - 240px);
+}
+
+
+#camera--container {
+    position: fixed;
+    display: flex;
+    width: 480px;
+    height: calc(80% - 100px);
+    background-color:aqua;
+}
+
+#camera--trigger {
+    width: 200px;
+    background-color: #DD5714;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 100px);
+}

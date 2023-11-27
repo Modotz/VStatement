@@ -1,0 +1,80 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  #camera, #camera--view, #camera--sensor, #camera--output{
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+  }
+  #camera--view, #camera--sensor, #camera--output{
+      transform: scaleX(-1);
+      filter: FlipH;
+  }
+#camera--trigger {
+    width: 200px;
+    background-color: #ff6a00;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 100px);
+}
+  .taken{
+      height: 100px!important;
+      width: 100px!important;
+      transition: all 0.5s ease-in;
+      border: solid 3px white;
+      box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+      top: 20px;
+      right: 20px;
+      z-index: 2;
+  }
+
+.full-circle {
+    background-color: rgba(204, 0, 102, 0);
+    border: 3px solid white;
+    height: 120px;
+    width: 120px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: absolute;
+    margin: 0px;
+    left: calc(50% - 60px);
+    top: 150px;
+}
+
+.head {
+    background-color: rgba(204, 0, 102, 0);
+    border: 3px solid white;
+    height: 350px;
+    width: 300px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: absolute;
+    margin: 0px;
+    left: 50%;
+    top: 200px;
+    transform: translate(-50%,-50%);
+}
+
+.full-rectangle {
+    background-color: rgba(204, 0, 102, 0);
+    border: 3px solid white;
+    border-radius:10px;
+    width: calc(100% - 100px);
+    height: 230px;
+    position: absolute;
+    margin: 0px;
+    left: 50%;
+    bottom: 5px;
+    transform: translate(-50%,-50%);
+}

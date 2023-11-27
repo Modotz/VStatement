@@ -1,0 +1,292 @@
+#header {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    background-color: #DD5714;
+}
+
+#progresh {
+    position: fixed;
+    margin-top: 50px;
+    width: 480px;
+    height: 100px;
+    left: calc(50% - 240px);
+}
+
+.card-image {
+    position: absolute;
+    width: 480px;
+    height: 100%;
+}
+
+.bulet {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: lightgray;
+}
+
+.bulet-check {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: forestgreen;
+}
+
+.bulet-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sparator {
+    width: 40px;
+    height: 5px;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+#camera--container {
+    position: fixed;
+    display: flex;
+    width: 480px;
+    height: calc(80% - 100px);
+    left: calc(50% - 240px);
+}
+
+#camera--trigger {
+    width: 200px;
+    background-color: #DD5714;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 100px);
+}
+
+/*.head {
+    background-color: rgba(204, 0, 102, 0);
+    border: 3px solid white;
+    height: 250px;
+    width: 200px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: absolute;
+    margin: 0px;
+    left: 50%;
+    top: 150px;
+    transform: translate(-50%, -50%);
+}
+
+.full-rectangle {
+    background-color: rgba(204, 0, 102, 0);
+    border: 3px solid white;
+    border-radius: 10px;
+    width: calc(100% - 120px);
+    height: 200px;
+    position: absolute;
+    margin: 0px;
+    left: 50%;
+    top: 400px;
+    transform: translate(-50%, -50%);
+}*/
+
+.head {
+    background-color: rgba(204, 0, 102, 0);
+    border: 3px solid white;
+    height: 250px;
+    width: 200px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: absolute;
+    margin: 0px;
+    left: 50%;
+    top: 180px;
+    transform: translate(-50%, -50%);
+}
+
+.full-rectangle {
+    background-color: rgba(204, 0, 102, 0);
+    border: 3px solid white;
+    border-radius: 10px;
+    width: calc(100% - 250px);
+    height: 130px;
+    position: absolute;
+    margin: 0px;
+    left: 50%;
+    top: 390px;
+    transform: translate(-50%, -50%);
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Dosis:500);
+
+body {
+    background: #F1F1F1;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.timeline {
+    counter-reset: year 0;
+    position: relative;
+}
+
+    .timeline li {
+        list-style: none;
+        float: left;
+        width: 33.3333%;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Dosis', sans-serif;
+    }
+
+ul:nth-child(1) {
+    color: #DD5714;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+
+.timeline li:before {
+    counter-increment: year;
+    content: counter(year);
+    width: 30px;
+    height: 30px;
+    border: 3px solid #DD5714;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 auto 10px auto;
+    background: #F1F1F1;
+    color: #000;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+
+.timeline li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+    top: 17px;
+    left: -50%;
+    z-index: -999;
+    transition: all ease-in-out .3s;
+}
+
+.timeline li:first-child:after {
+    content: none;
+}
+
+.timeline li.active {
+    color: #555555;
+}
+
+    .timeline li.active:before {
+        background: #DD5714;
+        color: #F1F1F1;
+    }
+
+    .timeline li.active + li:after {
+        background: #DD5714;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:320px) {
+
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        /* background-color: #d63810; */
+    }
+}
+
+@media (min-width:480px) {
+
+    /* smartphones, Android phones, landscape iPhone */
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        /* background-color: #c56b17;  */
+    }
+}
+
+@media (min-width:600px) {
+
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        /* background-color: #87ceeb;  */
+    }
+}
+
+@media (min-width:801px) {
+
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        /* background-color: #87ceeb; */
+    }
+}
+
+@media (min-width:1025px) {
+
+    /* big landscape tablets, laptops, and desktops */
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        /*background-color: #87ceeb; */
+    }
+}
+
+@media (min-width:1281px) {
+
+    /* hi-res laptops and desktops */
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        /*background-color: #87ceeb; */
+    }
+}
